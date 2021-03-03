@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border" [translucent]="true">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+
+    <app-listas [terminada]="false"></app-listas>
+
+    <!-- 
+    <ion-list color="dark">
+        <ion-item *ngFor="let lista of deseosService.listas" detail color="dark" (click)="listaSeleccionada( lista )">
+
+            <ion-label>{{ lista.titulo }}</ion-label>
+
+            <ion-note color="primary" slot="end">{{ lista.items.length }} items </ion-note>
+
+        </ion-item>
+    </ion-list>
+    List of Text Items -->
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="agregarLista()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <!-- 
+    <ion-list>
+        <ion-item>
+            <ion-label>Input</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Toggle</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    <app-explore-container name="Hey Bro!"></app-explore-container>
+    List of Input Items -->
+
+
+</ion-content>
